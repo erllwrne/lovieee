@@ -8,7 +8,8 @@ SECRET_KEY = "django-insecure-replace-this-with-a-real-secret-in-prod"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", "your-render-app.onrender.com"]
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
