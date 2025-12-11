@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+{% block title %}Home - For My Love{% endblock %}
+
+{% block content %}
+<div class="home-top">
+  <h2>Welcome, {{ name }} 💕</h2>
+  <a class="logout" href="{% url 'logout' %}">Logout</a>
+</div>
+
+<div class="cards">
+  {% for card in cards %}
+    <a class="card" href="{% url 'card-detail' card.slot %}">
+      <div class="card-image" style="background-image: url('{{ card.image.url }}')"></div>
+      <div class="card-title">Card {{ card.slot }}</div>
+    </a>
+  {% endfor %}
+</div>
+{% endblock %}

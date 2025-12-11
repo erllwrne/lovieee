@@ -1,0 +1,27 @@
+{% extends "home/base.html" %}
+{% block title %}Login - For My Love{% endblock %}
+
+{% block content %}
+<div class="login-wrap">
+  <h2>Come in, my love</h2>
+
+  {% if error_message %}
+    <div class="error">{{ error_message }}</div>
+  {% endif %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="field">
+      {{ form.name.label_tag }}<br>
+      {{ form.name }}
+    </div>
+    <div class="field">
+      {{ form.anniversary.label_tag }}<br>
+      {{ form.anniversary }}
+    </div>
+    <button class="btn" type="submit">Open the door</button>
+  </form>
+
+  <p class="hint">Hint: Name + anniversary date ❤️</p>
+</div>
+{% endblock %}

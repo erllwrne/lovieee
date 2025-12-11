@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}For My Love{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+  <div class="hearts-container" id="hearts-container"></div>
+
+  <header class="site-header">
+    <h1>For My Love</h1>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <small>Made with ❤️</small>
+  </footer>
+
+  <script src="{% static 'home/hearts.js' %}"></script>
+</body>
+</html>

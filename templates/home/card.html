@@ -1,0 +1,13 @@
+{% extends "home/base.html" %}
+{% block title %}Card {{ card.slot }} - For My Love{% endblock %}
+
+{% block content %}
+<div class="card-page">
+  <a class="back" href="{% url 'home' %}">&larr; Back</a>
+  <h2>{{ card.title }}</h2>
+  <img class="large-photo" src="{{ card.image.url }}" alt="Card {{ card.slot }}">
+  <div class="letter">
+    {{ card.letter|linebreaksbr }}
+  </div>
+</div>
+{% endblock %}
